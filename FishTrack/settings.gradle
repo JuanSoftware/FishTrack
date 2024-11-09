@@ -20,5 +20,4 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "FishTrack"
-include(":app")
- 
+include ':app'
