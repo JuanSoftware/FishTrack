@@ -1,113 +1,184 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:layout_centerHorizontal="true"
-        android:text="Login"
-        android:textStyle="bold"
-        android:textColor="@color/soft_black"
-        android:textSize="30sp"/>
-
-    <LinearLayout
+     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:orientation="vertical"
-        android:layout_marginTop="200dp"
-        android:paddingHorizontal="20dp">
-
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
         <TextView
+            android:id="@+id/textLogin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Email"
-            android:textColor="@color/soft_black"
+            android:layout_centerHorizontal="true"
+            android:text="Login"
             android:textStyle="bold"
-            android:textSize="18sp"/>
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginTop="8dp"
-            android:background="@drawable/edittext_background"
-            android:paddingHorizontal="15dp"
-            android:paddingVertical="10dp"
-            android:inputType="textEmailAddress"
-            android:hint="Coloque o seu email"
-            android:drawableStart="@drawable/baseline_email_24"
-            android:drawablePadding="12dp"/>
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Senha"
             android:textColor="@color/soft_black"
-            android:textStyle="bold"
-            android:textSize="18sp"
-            android:layout_marginTop="20dp" />
+            android:textSize="30sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintVertical_bias="0.2"/>
 
-        <EditText
+        <LinearLayout
+            android:id="@+id/layoutLogin"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:paddingVertical="10dp"
-            android:paddingHorizontal="15dp"
-            android:background="@drawable/edittext_background"
-            android:layout_marginTop="8dp"
-            android:inputType="textPassword"
-            android:hint="Coloque a sua senha"
-            android:drawableStart="@drawable/baseline_password_24"
-            android:drawableEnd="@drawable/baseline_remove_red_eye_24"
-            android:drawablePadding="12dp"/>
+            android:layout_height="200dp"
+            android:orientation="vertical"
+            android:layout_marginTop="200dp"
+            android:paddingHorizontal="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintVertical_bias="0.3">
 
-    </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email"
+                android:textColor="@color/soft_black"
+                android:textStyle="bold"
+                android:textSize="18sp"/>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="180dp"
-        android:layout_marginBottom="40dp"
-        android:orientation="vertical"
-        android:layout_alignParentBottom="true"
-        android:paddingHorizontal="30dp">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edittext_background"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="10dp"
+                android:inputType="textEmailAddress"
+                android:hint="Coloque o seu email"
+                android:drawableStart="@drawable/baseline_email_24"
+                android:drawablePadding="12dp"/>
 
-        <Button
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Senha"
+                android:textColor="@color/soft_black"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginTop="20dp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:paddingVertical="10dp"
+                android:paddingHorizontal="15dp"
+                android:background="@drawable/edittext_background"
+                android:layout_marginTop="8dp"
+                android:inputType="textPassword"
+                android:hint="Coloque a sua senha"
+                android:drawableStart="@drawable/baseline_password_24"
+                android:drawableEnd="@drawable/baseline_remove_red_eye_24"
+                android:drawablePadding="12dp"/>
+
+
+        </LinearLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:background="@drawable/button_1_background"
-            android:elevation="9dp"
-            android:text="Entrar"
-            android:textColor="@color/white"
-            android:textSize="15sp" />
+            android:layout_height="180dp"
+            android:layout_alignParentBottom="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintVertical_bias="0.9">
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:textColor="@color/soft_black"
-            android:text="Sair"
-            android:textSize="15sp"
-            android:textAlignment="center"
-            android:layout_marginTop="15dp"
-            android:background="@drawable/button_2_background"
-            android:paddingStart="140dp"
-            android:paddingEnd="140dp"
-            android:drawableStart="@drawable/baseline_exit_to_app_24"/>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/button8"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/button6"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:background="@drawable/button_2_background"
+                >
+
+                <ImageView
+                    android:id="@+id/img"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/baseline_exit_to_app_24"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/textLoginButton"
+                    app:layout_constraintHorizontal_bias="0.98"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.5" />
+
+                    <TextView
+                        android:id="@+id/textLoginButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Login"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:textColor="@color/soft_black"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <Button
+                android:id="@+id/button6"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/button_1_background"
+                android:elevation="9dp"
+                android:text="Entrar"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button8"
+                tools:layout_editor_absoluteX="0dp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+         <androidx.constraintlayout.widget.ConstraintLayout
+             android:layout_width="match_parent"
+             android:layout_height="50dp"
+             app:layout_constraintBottom_toBottomOf="parent"
+             app:layout_constraintTop_toTopOf="parent"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintVertical_bias="1">
+             <ImageView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:src="@drawable/baseline_question_mark_24"
+                 app:layout_constraintBottom_toBottomOf="parent"
+                 app:layout_constraintTop_toTopOf="parent"
+                 app:layout_constraintStart_toStartOf="parent"
+                 app:layout_constraintEnd_toEndOf="parent"
+                 app:layout_constraintHorizontal_bias="0.99"
+                 android:background="@drawable/button_2_background"
+                 />
+         </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-    </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="20dp"
-        android:layout_alignParentBottom="true">
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/baseline_question_mark_24"
-            />
-    </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
 
 </RelativeLayout>
