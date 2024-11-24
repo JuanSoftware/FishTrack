@@ -11,12 +11,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);  // Vinculando o layout XML
 
-        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
+        //BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
 
         // Configuração do BottomNavigationView
-        bottomNavigationView.setOnNavigationItemSelectedListener(item -> {
+       // bottomNavigationView.setOnNavigationItemSelectedListener(item -> {
             // Lógica para alterar fragments
-            return true;
-        });
+        //    return true;
+     //   });
     }
 }
