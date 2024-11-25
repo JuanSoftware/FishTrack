@@ -1,4 +1,4 @@
-package com.example.fishtrack.activitys.home.ui.notifications;
+package com.example.fishtrack.activities.home.ui.notifications;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;

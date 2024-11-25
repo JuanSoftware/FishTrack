@@ -13,12 +13,13 @@
         android:theme="@style/Theme.FishTrack"
         tools:targetApi="31">
         <activity
-            android:name=".activitys.home.HomePageActivity"
+            android:name=".activities.home.HomePageActivity"
             android:exported="false"
-            android:label="@string/title_activity_home_page" />
+            android:label="FishTrack">
+        </activity>
         <!-- Definindo a MainActivity com o android:exported -->
         <activity
-            android:name=".activitys.LoginActivity"
+            android:name=".activities.LoginActivity"
             android:exported="true"> <!-- Necessário para Android 12+ -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

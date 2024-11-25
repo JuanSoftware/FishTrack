@@ -1,4 +1,4 @@
-package com.example.fishtrack.activitys;
+package com.example.fishtrack.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,7 +8,7 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.fishtrack.R;
-import com.example.fishtrack.activitys.home.HomePageActivity;
+import com.example.fishtrack.activities.home.HomePageActivity;
 
 public class LoginActivity extends AppCompatActivity {
 
