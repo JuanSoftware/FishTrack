@@ -12,16 +12,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FishTrack"
         tools:targetApi="31">
-
+        <activity
+            android:name=".activities.home.HomePageActivity"
+            android:exported="false"
+            android:label="FishTrack">
+        </activity>
         <!-- Definindo a MainActivity com o android:exported -->
-        <activity android:name=".MainActivity"
+        <activity
+            android:name=".activities.LoginActivity"
             android:exported="true"> <!-- Necessário para Android 12+ -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
     </application>
 
 </manifest>
