@@ -1,4 +1,4 @@
-package com.example.fishtrack.activities.home.ui.home;
+package com.example.fishtrack.activities.home.fragments.home_page;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -9,18 +9,18 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.example.fishtrack.databinding.FragmentHomeBinding;
+import com.example.fishtrack.databinding.FragmentHomePageBinding;
 
-public class HomeFragment extends Fragment {
+public class HomePageFragment extends Fragment {
 
-    private FragmentHomeBinding binding;
+    private FragmentHomePageBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        HomeViewModel homeViewModel =
-                new ViewModelProvider(this).get(HomeViewModel.class);
+        HomePageViewModel homeViewModel =
+                new ViewModelProvider(this).get(HomePageViewModel.class);
 
-        binding = FragmentHomeBinding.inflate(inflater, container, false);
+        binding = FragmentHomePageBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
 //        final TextView textView = binding.textHome;
