@@ -1,4 +1,4 @@
-package com.example.fishtrack.activities;
+package com.example.fishtrack.activities.login;
 
 import android.content.Intent;
 import android.os.Bundle;
