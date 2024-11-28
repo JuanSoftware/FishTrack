@@ -1,9 +1,12 @@
 package com.example.fishtrack.activities.shared.frames;
 
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.text.InputType;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -35,13 +38,14 @@ public class DropDownFragment extends Fragment {
         View viewFragment = inflater.inflate(R.layout.fragment_drop_down, container, false);
 
         autoCompleteTextView = viewFragment.findViewById(R.id.auto_complete_txt);
-        adapterItems = new ArrayAdapter<String>(getContext(), R.layout.list_item, items);
+        adapterItems = new ArrayAdapter<String>(getActivity(), R.layout.list_item, items);
+        autoCompleteTextView.setInputType(InputType.TYPE_NULL);
         autoCompleteTextView.setAdapter(adapterItems);
         autoCompleteTextView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String item = parent.getItemAtPosition(position).toString();
-                Toast.makeText(getContext(), item, Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), item, Toast.LENGTH_SHORT).show();
             }
         });
         return viewFragment;

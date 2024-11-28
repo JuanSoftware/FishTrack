@@ -14,7 +14,6 @@ import com.example.fishtrack.databinding.ActivityHomePageBinding;
 public class HomePageActivity extends AppCompatActivity {
 
     private ActivityHomePageBinding binding;
-    private DropDownFragment dropDownFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,10 +22,6 @@ public class HomePageActivity extends AppCompatActivity {
         binding = ActivityHomePageBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_home_page);
-        dropDownFragment = new DropDownFragment();
-        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.replace(R.id.dropdown_menu,dropDownFragment);
-        fragmentTransaction.commit();
         NavigationUI.setupWithNavController(binding.navView, navController);
     }
 
