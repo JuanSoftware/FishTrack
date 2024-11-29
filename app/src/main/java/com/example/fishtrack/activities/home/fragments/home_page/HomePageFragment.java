@@ -11,8 +11,9 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.example.fishtrack.R;
-import com.example.fishtrack.activities.shared.fragments.DropDownFragment;
+import com.example.fishtrack.shared.fragments.DropDownFragment;
 import com.example.fishtrack.databinding.FragmentHomePageBinding;
+import com.example.fishtrack.shared.utils.style.StyleUtils;
 
 public class HomePageFragment extends Fragment {
 
@@ -25,12 +26,11 @@ public class HomePageFragment extends Fragment {
 
         binding = FragmentHomePageBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
+        StyleUtils.setBackgroundBorderColor(root.findViewById(R.id.panel_img),"#bdc3c7",6f,2,"#000000");
         dropDownFragment = new DropDownFragment();
         FragmentTransaction fragmentTransaction = getChildFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.dropdown_menu,dropDownFragment);
         fragmentTransaction.commit();
-//        final TextView textView = binding.textHome;
-//        homeViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
     }
 

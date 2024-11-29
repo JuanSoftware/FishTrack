@@ -36,6 +36,7 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/panel_img"
         android:layout_width="0dp"
         android:layout_height="300dp"
         app:layout_constraintWidth_percent="0.9"

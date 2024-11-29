@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar"
-    tools:context=".activities.shared.fragments.DropDownFragment">
+    tools:context=".shared.fragments.DropDownFragment">
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"

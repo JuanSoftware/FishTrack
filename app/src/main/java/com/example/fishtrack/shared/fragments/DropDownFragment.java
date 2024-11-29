@@ -1,4 +1,4 @@
-package com.example.fishtrack.activities.shared.fragments;
+package com.example.fishtrack.shared.fragments;
 
 import android.os.Bundle;
 
