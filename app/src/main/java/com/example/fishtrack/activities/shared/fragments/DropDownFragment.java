@@ -1,7 +1,5 @@
-package com.example.fishtrack.activities.shared.frames;
+package com.example.fishtrack.activities.shared.fragments;
 
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;

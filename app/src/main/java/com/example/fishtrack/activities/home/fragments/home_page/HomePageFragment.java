@@ -11,7 +11,7 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.example.fishtrack.R;
-import com.example.fishtrack.activities.shared.frames.DropDownFragment;
+import com.example.fishtrack.activities.shared.fragments.DropDownFragment;
 import com.example.fishtrack.databinding.FragmentHomePageBinding;
 
 public class HomePageFragment extends Fragment {

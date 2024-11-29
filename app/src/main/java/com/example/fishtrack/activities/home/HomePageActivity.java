@@ -3,12 +3,10 @@ package com.example.fishtrack.activities.home;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentTransaction;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.NavigationUI;
 import com.example.fishtrack.R;
-import com.example.fishtrack.activities.shared.frames.DropDownFragment;
 import com.example.fishtrack.databinding.ActivityHomePageBinding;
 
 public class HomePageActivity extends AppCompatActivity {
