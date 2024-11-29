@@ -26,7 +26,7 @@ public class HomePageFragment extends Fragment {
 
         binding = FragmentHomePageBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
-        StyleUtils.setBackgroundBorderColor(root.findViewById(R.id.panel_img),"#bdc3c7",6f,2,"#000000");
+        StyleUtils.setBackgroundBorderColor(root.findViewById(R.id.panel_img),"#94a3b8",20f,2,"#000000");
         dropDownFragment = new DropDownFragment();
         FragmentTransaction fragmentTransaction = getChildFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.dropdown_menu,dropDownFragment);
