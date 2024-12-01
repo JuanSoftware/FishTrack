@@ -10,4 +10,5 @@
     <color name="red">#ff0022</color>
     <color name="soft_black">#2F2E2E</color>
     <color name="primary_color">#f8fafc</color>
+    <color name="home_panel_color">#94a3b8</color>
 </resources>
