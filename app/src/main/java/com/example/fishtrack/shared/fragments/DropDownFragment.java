@@ -17,15 +17,15 @@ import com.example.fishtrack.R;
 
 public class DropDownFragment extends Fragment {
 
-    String[] items = {"setor1","setor2","setor3","setor4","setor5"};
+    String[] items;
 
     AutoCompleteTextView autoCompleteTextView;
 
     ArrayAdapter<String> adapterItems;
 
 
-    public DropDownFragment() {
-        // Required empty public constructor
+    public DropDownFragment(String[] items) {
+        this.items = items;
     }
 
     @Override
