@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -25,6 +26,9 @@ import com.example.fishtrack.shared.utils.StyleUtils;
 
 public class HomePageFragment extends Fragment {
 
+    private Boolean showImage = true;
+    private Button button;
+    private Button button2;
     private FragmentHomePageBinding binding;
     private DropDownFragment dropDownFragment;
     private String[] itemsDropDown = {"Setor1","Setor2","Setor3","Setor4"};
@@ -33,7 +37,8 @@ public class HomePageFragment extends Fragment {
         HomePageViewModel homeViewModel = new ViewModelProvider(this).get(HomePageViewModel.class);
 
         binding = FragmentHomePageBinding.inflate(inflater, container, false);
-
+        button = new Button(getActivity());
+        button2 = new Button(getActivity());
         View root = binding.getRoot();
 
         StyleUtils styleUtils = new StyleUtils();
@@ -44,11 +49,11 @@ public class HomePageFragment extends Fragment {
 
         GradientDrawable circle1 = circleShape(Color.parseColor("#afaeb5"));
         GradientDrawable circle2 = circleShape(Color.parseColor("#e7e6ed"));
-        Button button = new Button(getActivity());
+
         button.setId(View.generateViewId());
         button.setBackground(circle1);
 
-        Button button2 = new Button(getActivity());
+
         button2.setId(View.generateViewId());
         button2.setBackground(circle2);
 
@@ -89,10 +94,24 @@ public class HomePageFragment extends Fragment {
         FragmentTransaction fragmentTransaction = getChildFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.dropdown_menu,dropDownFragment);
         fragmentTransaction.commit();
+
+        root.findViewById(R.id.tanque_img).setOnClickListener(v -> {
+            button.setBackground(circle2);
+            button2.setBackground(circle1);
+            root.findViewById(R.id.tanque_img).setVisibility(View.GONE);
+            root.findViewById(R.id.info_data).setVisibility(View.VISIBLE);
+        });
+
+        root.findViewById(R.id.info_data).setOnClickListener(v -> {
+            button.setBackground(circle1);
+            button2.setBackground(circle2);
+            root.findViewById(R.id.tanque_img).setVisibility(View.VISIBLE);
+            root.findViewById(R.id.info_data).setVisibility(View.GONE);
+        });
+
         return root;
     }
-//#afaeb5
-//#e7e6ed
+
     public GradientDrawable circleShape(int color){
         GradientDrawable shape = new GradientDrawable();
         shape.setShape(GradientDrawable.OVAL);
