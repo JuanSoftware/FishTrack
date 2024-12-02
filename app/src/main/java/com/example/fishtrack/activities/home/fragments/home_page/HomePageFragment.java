@@ -32,6 +32,7 @@ public class HomePageFragment extends Fragment {
     private FragmentHomePageBinding binding;
     private DropDownFragment dropDownFragment;
     private String[] itemsDropDown = {"Setor1","Setor2","Setor3","Setor4"};
+
     public View onCreateView(@NonNull LayoutInflater inflater,ViewGroup container, Bundle savedInstanceState) {
 
         HomePageViewModel homeViewModel = new ViewModelProvider(this).get(HomePageViewModel.class);
@@ -43,9 +44,12 @@ public class HomePageFragment extends Fragment {
 
         StyleUtils styleUtils = new StyleUtils();
 
-        styleUtils.setBackground("#94a3b8",20f,2,"#000000");
+        styleUtils.setBackground("#01417e",20f,2,"#000000");
 
-        styleUtils.setStyleInElement(root.findViewById(R.id.panel_img));
+//        styleUtils.setStyleInElement(root.findViewById(R.id.panel_img));
+//
+//        styleUtils.setStyleInElement(root.findViewById(R.id.ph));
+//        styleUtils.setStyleInElement(root.findViewById(R.id.temperature));
 
         GradientDrawable circle1 = circleShape(Color.parseColor("#afaeb5"));
         GradientDrawable circle2 = circleShape(Color.parseColor("#e7e6ed"));
@@ -77,6 +81,8 @@ public class HomePageFragment extends Fragment {
             null,
             ConstraintSet.CHAIN_PACKED
         );
+//        constraintSet1.setVerticalBias(button.getId(),0.5f);
+//        constraintSet1.setVerticalBias(button2.getId(),0.5f);
         constraintSet1.applyTo(parentConstraint);
 
         ConstraintSet constraintSet2 = new ConstraintSet();
@@ -98,6 +104,7 @@ public class HomePageFragment extends Fragment {
         root.findViewById(R.id.tanque_img).setOnClickListener(v -> {
             button.setBackground(circle2);
             button2.setBackground(circle1);
+//            styleUtils.setStyleInElement(root.findViewById(R.id.info_data));
             root.findViewById(R.id.tanque_img).setVisibility(View.GONE);
             root.findViewById(R.id.info_data).setVisibility(View.VISIBLE);
         });
@@ -107,6 +114,8 @@ public class HomePageFragment extends Fragment {
             button2.setBackground(circle2);
             root.findViewById(R.id.tanque_img).setVisibility(View.VISIBLE);
             root.findViewById(R.id.info_data).setVisibility(View.GONE);
+//            styleUtils.setStyleInElement(root.findViewById(R.id.tanque_img));
+//            styleUtils.setStyleInElement(root.findViewById(R.id.info_data));
         });
 
         return root;
