@@ -25,8 +25,6 @@ public class FoodFragment extends Fragment {
         binding = FragmentFoodBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textDashboard;
-        dashboardViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
     }
 
