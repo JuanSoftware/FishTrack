@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!-- Permissões necessárias -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -12,21 +16,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FishTrack"
         tools:targetApi="31">
+
+        <!-- Definindo a HomePageActivity -->
         <activity
             android:name=".activities.home.HomePageActivity"
             android:exported="false"
-            android:label="@string/app_name">
-        </activity>
-        <!-- Definindo a MainActivity com o android:exported -->
+            android:label="@string/app_name" />
+
+        <!-- Definindo a LoginActivity com android:exported -->
         <activity
             android:name=".activities.login.LoginActivity"
-            android:exported="true"> <!-- Necessário para Android 12+ -->
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
     </application>
-
 </manifest>
