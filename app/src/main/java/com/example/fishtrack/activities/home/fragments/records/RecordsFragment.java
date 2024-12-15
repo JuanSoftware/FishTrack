@@ -34,20 +34,20 @@ public class RecordsFragment extends Fragment {
 
         String graphTemper = "<iframe src=\"http://64.23.231.54:5001/embed/query/1/visualization/2?api_key=6uqA3HzQOGDX5Sk7PpfpNvNYlvaNCRvxGyz9H2wb&\" width=\"720\" height=\"391\"></iframe>";
 
-        String graphPh = "<iframe src=\"http://64.23.231.54:5001/embed/query/1/visualization/2?api_key=6uqA3HzQOGDX5Sk7PpfpNvNYlvaNCRvxGyz9H2wb&\" width=\"720\" height=\"391\"></iframe>";
+        String graphPh = "<iframe src=\"http://64.23.231.54:5001/embed/query/2/visualization/5?api_key=TV5GsimkdgWqPqbxnVQFoxBooCFZ623MGUsWH5ol&\" width=\"720\" height=\"391\"></iframe>";
 
         String encodedHTMLPH = Base64.encodeToString(graphPh.getBytes(), Base64.NO_PADDING);
         String encodedHTMLTemper= Base64.encodeToString(graphTemper.getBytes(), Base64.NO_PADDING);
 
-        temperWebView.getSettings().setDomStorageEnabled(true); // Habilitar Armazenamento DOM
-        temperWebView.getSettings().setAllowContentAccess(true); // Permitir acesso ao conteúdo
+        temperWebView.getSettings().setDomStorageEnabled(true);
+        temperWebView.getSettings().setAllowContentAccess(true);
         temperWebView.getSettings().setMixedContentMode(temperWebView.getSettings().MIXED_CONTENT_ALWAYS_ALLOW);
         temperWebView.getSettings().setLoadsImagesAutomatically(true);
         temperWebView.getSettings().setJavaScriptEnabled(true);
 
         phWebView.getSettings().setJavaScriptEnabled(true);
-        phWebView.getSettings().setDomStorageEnabled(true); // Habilitar Armazenamento DOM
-        phWebView.getSettings().setAllowContentAccess(true); // Permitir acesso ao conteúdo
+        phWebView.getSettings().setDomStorageEnabled(true);
+        phWebView.getSettings().setAllowContentAccess(true);
         phWebView.getSettings().setMixedContentMode(temperWebView.getSettings().MIXED_CONTENT_ALWAYS_ALLOW);
         phWebView.getSettings().setLoadsImagesAutomatically(true);
 
