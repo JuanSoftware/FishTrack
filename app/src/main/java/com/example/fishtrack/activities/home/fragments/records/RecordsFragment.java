@@ -1,16 +1,22 @@
 package com.example.fishtrack.activities.home.fragments.records;
 
 import android.os.Bundle;
+import android.util.Base64;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
+import android.webkit.WebChromeClient;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.example.fishtrack.R;
+import com.example.fishtrack.databinding.FragmentFoodBinding;
 import com.example.fishtrack.databinding.FragmentRecordsBinding;
+
 
 public class RecordsFragment extends Fragment {
 
@@ -18,13 +24,12 @@ public class RecordsFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        RecordsViewModel notificationsViewModel =
+        RecordsViewModel dashboardViewModel =
                 new ViewModelProvider(this).get(RecordsViewModel.class);
 
         binding = FragmentRecordsBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
-<<<<<<< Updated upstream
-=======
+
         WebView temperWebView = root.findViewById(R.id.web_view_temper);
         WebView phWebView = root.findViewById(R.id.web_view_ph);
 
@@ -56,10 +61,8 @@ public class RecordsFragment extends Fragment {
         phWebView.setWebChromeClient(new WebChromeClient());
 
 
->>>>>>> Stashed changes
 
-        final TextView textView = binding.textNotifications;
-        notificationsViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+
         return root;
     }
 
