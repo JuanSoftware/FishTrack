@@ -16,6 +16,13 @@ import com.example.fishtrack.databinding.FragmentHomePageBinding;
 
 public class HomePageFragment extends Fragment {
 
+<<<<<<< Updated upstream
+=======
+    private static final String BROKER_URL = "tcp://146.190.131.25:1883";
+    private static final String CLIENT_ID = "fishtrack-client";
+    private static final String TOPIC_TEMPERATURE = "sensor/temperature/tanqueum";
+
+>>>>>>> Stashed changes
     private FragmentHomePageBinding binding;
     private DropDownFragment dropDownFragment;
     public View onCreateView(@NonNull LayoutInflater inflater,
