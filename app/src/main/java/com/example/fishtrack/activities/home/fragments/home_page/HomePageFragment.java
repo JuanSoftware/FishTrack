@@ -27,9 +27,12 @@ import com.example.fishtrack.MqttHandler;
 
 public class HomePageFragment extends Fragment {
 
-    private static final String BROKER_URL = "tcp://10.0.2.2:1883";
+    private static final String BROKER_URL = "tcp://146.190.131.25:1883";
     private static final String CLIENT_ID = "fishtrack-client";
-    private static final String TOPIC_TEMPERATURE = "sensor/temperature";
+    private static final String TOPIC_TEMPERATURE = "sensor/temperature/tanqueum";
+
+
+
 
     private FragmentHomePageBinding binding;
     private DropDownFragment dropDownFragment;

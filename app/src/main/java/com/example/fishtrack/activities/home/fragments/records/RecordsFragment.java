@@ -29,12 +29,13 @@ public class RecordsFragment extends Fragment {
 
         binding = FragmentRecordsBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
+
         WebView temperWebView = root.findViewById(R.id.web_view_temper);
         WebView phWebView = root.findViewById(R.id.web_view_ph);
 
-        String graphTemper = "<iframe src=\"http://64.23.231.54:5001/embed/query/1/visualization/2?api_key=6uqA3HzQOGDX5Sk7PpfpNvNYlvaNCRvxGyz9H2wb&\" width=\"720\" height=\"391\"></iframe>";
+        String graphTemper = "<iframe src=\"http://146.190.131.25:5001/embed/query/1/visualization/2?api_key=eOBWwEN5y6VAtBs0U96VieZ1ehXWQ7L0CQv4Qcgm&\" width=\"720\" height=\"391\"></iframe>";
 
-        String graphPh = "<iframe src=\"http://64.23.231.54:5001/embed/query/2/visualization/5?api_key=TV5GsimkdgWqPqbxnVQFoxBooCFZ623MGUsWH5ol&\" width=\"720\" height=\"391\"></iframe>";
+        String graphPh = "<iframe src=\"http://146.190.131.25:5001/embed/query/2/visualization/4?api_key=dkSfknCOe1uUy5ia77U7nwDe71HlNWyt5j7htvVp&\" width=\"720\" height=\"391\"></iframe>";
 
         String encodedHTMLPH = Base64.encodeToString(graphPh.getBytes(), Base64.NO_PADDING);
         String encodedHTMLTemper= Base64.encodeToString(graphTemper.getBytes(), Base64.NO_PADDING);
@@ -58,6 +59,7 @@ public class RecordsFragment extends Fragment {
         temperWebView.setWebChromeClient(new WebChromeClient());
 
         phWebView.setWebChromeClient(new WebChromeClient());
+
 
 
 
