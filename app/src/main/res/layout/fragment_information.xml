@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <ScrollView
+        android:id="@+id/scroll_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btn_return"
+        android:padding="24dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/information_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Informações"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:paddingBottom="12dp"
+                android:layout_marginBottom="20dp"
+                android:elevation="5dp" />
+
+            <TextView
+                android:id="@+id/information_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bem-vindo ao FishTrack!\n\nNosso sistema monitora a saúde dos peixes com sensores que medem temperatura e pH da água. Garantimos um ambiente ideal para a vida aquática, ajudando pescadores e pesquisadores."
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:lineSpacingExtra="6dp"
+                android:gravity="center_horizontal"
+                android:paddingTop="8dp" />
+
+            <ImageView
+                android:id="@+id/information_image"
+                android:layout_width="wrap_content"
+                android:layout_height="315dp"
+                android:layout_marginTop="16dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/IC_AQUARIUM" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_return"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="25dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/white"
+        android:drawableStart="@drawable/ic_undo"
+        android:elevation="0dp"
+        android:stateListAnimator="@null"
+        />
+</RelativeLayout>
