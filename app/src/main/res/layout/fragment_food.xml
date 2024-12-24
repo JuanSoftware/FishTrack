@@ -10,7 +10,11 @@
     android:background="?android:attr/windowBackground">
 
     <TextView
+<<<<<<< HEAD
         android:id="@+id/title_food"
+=======
+        android:id="@+id/text_notifications"
+>>>>>>> a3666ed4de87100fbe0fba84360d739f0ae5f0bd
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Registro de Alimentação"
