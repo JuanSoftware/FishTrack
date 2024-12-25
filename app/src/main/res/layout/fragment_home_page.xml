@@ -24,6 +24,7 @@
         app:layout_constraintVertical_chainStyle="spread"/>
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:padding="10dp"
         android:id="@+id/dropdown_menu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -184,7 +185,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="25dp"
-                android:text="°C:"
+                android:text="28°C:"
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="25sp"
