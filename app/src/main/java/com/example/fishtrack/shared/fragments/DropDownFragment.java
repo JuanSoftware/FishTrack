@@ -14,16 +14,18 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Toast;
 
 import com.example.fishtrack.R;
+import com.example.fishtrack.databinding.FragmentDropDownBinding;
 
 public class DropDownFragment extends Fragment {
 
-    String[] items;
+    String[] items = {"Setor1", "Setor2", "Setor3", "Setor4"};
 
     AutoCompleteTextView autoCompleteTextView;
 
     ArrayAdapter<String> adapterItems;
 
-
+    FragmentDropDownBinding binding;
+    public DropDownFragment(){}
     public DropDownFragment(String[] items) {
         this.items = items;
     }
@@ -33,9 +35,10 @@ public class DropDownFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
 
-        View viewFragment = inflater.inflate(R.layout.fragment_drop_down, container, false);
+        binding = FragmentDropDownBinding.inflate(inflater, container, false);
+        View root = binding.getRoot();
 
-        autoCompleteTextView = viewFragment.findViewById(R.id.auto_complete_txt);
+        autoCompleteTextView = root.findViewById(R.id.auto_complete_txt);
         adapterItems = new ArrayAdapter<String>(getActivity(), R.layout.list_item, items);
         autoCompleteTextView.setInputType(InputType.TYPE_NULL);
         autoCompleteTextView.setAdapter(adapterItems);
@@ -46,6 +49,6 @@ public class DropDownFragment extends Fragment {
                 Toast.makeText(getActivity(), item, Toast.LENGTH_SHORT).show();
             }
         });
-        return viewFragment;
+        return root;
     }
 }
