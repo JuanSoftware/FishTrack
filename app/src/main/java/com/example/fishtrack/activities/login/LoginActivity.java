@@ -34,8 +34,7 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 emailInput = findViewById(R.id.email_input);
                 passwordInput = findViewById(R.id.password_input);
-                System.out.println(emailInput.getText().toString());
-                System.out.println(passwordInput.getText().toString());
+
                 LoginModal loginUser = new LoginModal(emailInput.getText().toString(),passwordInput.getText().toString());
                 user.user(loginUser).enqueue(new retrofit2.Callback<LoginResponseDTO>() {
                     @Override
