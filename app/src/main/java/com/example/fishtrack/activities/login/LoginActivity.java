@@ -15,6 +15,7 @@ import com.example.fishtrack.httpClient.RetrofitClient;
 import com.example.fishtrack.services.login.LoginDTO.LoginResponseDTO;
 import com.example.fishtrack.services.login.LoginModal;
 import com.example.fishtrack.services.login.LoginService;
+import com.jakewharton.threetenabp.AndroidThreeTen;
 
 import retrofit2.Call;
 
@@ -25,6 +26,7 @@ public class LoginActivity extends AppCompatActivity {
     private EditText passwordInput;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        AndroidThreeTen.init(this);
         LoginService user = RetrofitClient.retrofitSingleton().create(LoginService.class);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_main);

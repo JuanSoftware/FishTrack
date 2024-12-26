@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -15,6 +16,12 @@ import androidx.lifecycle.ViewModelProvider;
 import com.example.fishtrack.R;
 import com.example.fishtrack.databinding.FragmentFoodBinding;
 import com.example.fishtrack.shared.fragments.DropDownFragment;
+import com.google.android.material.datepicker.MaterialDatePicker;
+
+import org.threeten.bp.Instant;
+import org.threeten.bp.LocalDateTime;
+import org.threeten.bp.ZoneId;
+import org.threeten.bp.format.DateTimeFormatter;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -56,6 +63,26 @@ public class FoodFragment extends Fragment {
                 new String[]{"title", "subtitle"},
                 new int[]{android.R.id.text1, android.R.id.text2}
         );
+
+        MaterialDatePicker<Long> datePicker = MaterialDatePicker.Builder
+                .datePicker()
+                .setTitleText("Selecione uma data")
+                .build();
+
+        root.findViewById(R.id.button_open_date_picker).setOnClickListener(view -> datePicker.show(getActivity().getSupportFragmentManager(), "DATE_PICKER"));
+
+        datePicker.addOnPositiveButtonClickListener(selection -> {
+
+            LocalDateTime dateTime = Instant.ofEpochMilli(selection)
+                    .atZone(ZoneId.systemDefault()) // Usar fuso horário local
+                    .toLocalDateTime();
+
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
+
+            String dateString = dateTime.format(formatter);
+
+            Toast.makeText(getActivity(), dateString, Toast.LENGTH_SHORT).show();
+        });
 
         listView.setAdapter(adapter);
         return root;
